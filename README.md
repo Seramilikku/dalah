@@ -1,1 +1,2 @@
 # dalah
+Bang mana balans?
