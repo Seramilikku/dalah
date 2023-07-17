@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="id">
+
+    <head>
+        <meta charset= "utf-8">
+        <title>Halaman Daftar</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+        function validateForm() {
+            var username = document.forms["registrationForm"]["username"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var phone_number = document.forms["registrationForm"]["phone_number"].value;
+
+            if (username === "" || password === "" || email === "" || phone_number === "") {
+                alert("Harap isi semua data.");
+                return false;
+            }
+        }
+        </script>
+    </head>
+   
+    <body>
+    	<div> 
+    <header>
+      <div class="kontainer">
+    <nav class="tombol">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/lgo.png" alt="logo">
+            </a>
+        </div>
+        <ul class="navigation">
+            <li><a href="loginSRC.html" class="button">Login</a></li>
+        </ul>
+    </nav>
+  </div>
+   </header>
+      </div>
+        <div class="bg">
+        <div class="container">
+          <h1>Daftar</h1>
+            <form method="post" action="daftarSRC.jsp">
+                <label>Username</label><br>
+                <input type="text" name="username"><br>
+                <label>Password</label><br>
+                <input type="password" name="password"><br>
+                <label>Alamat E-mail</label><br>
+                <input type="email" name="email"><br>
+                <label>Nomor Hp</label><br>
+                <input type="tel" name="phone_number"><br>
+                <label> Gender 
+                	<select name="gender">
+                		<option value="male">male</option>
+                		<option value="female">female</option>
+                	</select>    
+                </label>
+                <br>
+                <br> 
+                <button>Daftar Sekarang</button>
+                <br>
+                <br>
+            </form>
+          <script>
+                var urlParams = new URLSearchParams(window.location.search);
+                var errorMessage = urlParams.get('error');
+                if (errorMessage) {
+                    alert(errorMessage);
+                }
+            </script>
+        </div>
+        </div>
+    <footer>
+      <p>&copy; 2022 SRC Indonesia. All rights reserved By Ezi Punazi.</p>
+     </footer>  
+    </body>
+</html>
